@@ -2,14 +2,14 @@
 
 import os
 
+out=open("testimonials.html.base","r").read()
+
 list=open("testimonials.csv","r").read().split("\n,")
 
-pics={
-     "Jill Dyckman"
-        }
+out+="<!-- begin testimonials -->"
 
 for t in list:
-    t=t.strip()
+    t=t.strip().replace("’","'").replace("“","\"").replace("”","\"")
     t=t.split("\n",1)
 
     html=f"""<div class="image-container"><div><span>
@@ -20,4 +20,10 @@ for t in list:
     <img  class="testimonial_picture" src="assets/{t[0]}">
     </div></div>"""
     print(html)
+    out+=html+"\n"
+
+
+out+="</body>\n"
+
+open("testimonials.html","w").write(out)
 
