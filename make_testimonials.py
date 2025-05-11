@@ -11,9 +11,10 @@ out+="<!-- begin testimonials -->"
 for t in list:
     t=t.strip().replace("’","'").replace("“","\"").replace("”","\"")
     t=t.split("\n",1)
+    message=t[1].ljust(130,"\t")
 
     html=f"""<div class="image-container"><div><span>
-    "{t[1]}"
+    "{message}"
     <br><i><b>
     {t[0]}
     </b></i><span></div><div>
