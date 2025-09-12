@@ -154,18 +154,19 @@
 </head>
 <body>
 
-    <header>
+<header>
     <div class="logo">
-      <img style="width:auto;" src="assets/logo.png" alt="Logo">
+      <img style="width:auto; " src="assets/logo.png" alt="Logo">
     </div>
     <nav class="nav-options">
       <a href="index.html">Home</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="about.html">About</a>
       <a href="testimonials.html">Testimonials</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
-  </header>
+</header>
+
 
 <h1>TESTIMONIALS</h1>
 
